@@ -1,4 +1,4 @@
-# Automatic-Certificate-Generator
+# Automatic-CertificateDetail-Generator
 Generates Certificates with Name and Project Names based on a CSV file
 
 - Script to add text on certificates using data in csv file on a png
