@@ -26,6 +26,7 @@ def main():
             """
             img.save("Certificates/" + row[0] + ".png")
             print(str(i) + " Images Processed")
+            i += 1
             
             # Ported From CV2 to Pillow
             
