@@ -26,8 +26,18 @@ def main():
             """
             img.save("Certificates/" + row[0] + ".png")
             print(str(i) + " Images Processed")
-
-            i += 1
-
+            
+            # Ported From CV2 to Pillow
+            
+            #############################################################
+            #  cv2.putText(img, row[0], (2458, 1260),                   #
+            #           cv2.FONT_HERSHEY_SIMPLEX, 2.6, (0, 0, 0), 6)    #
+            #  cv2.putText(img, row[1], (1530, 1413),                   #
+            #           cv2.FONT_HERSHEY_SIMPLEX, 2.6, (0, 0, 0), 6)    #
+            #  cv2.imwrite("Certificates/"+str(i)+row[0]                #
+            #           + ".png", img)                                  #
+            #############################################################
+            
+            # For future use with cv2 and any font connect pillow and cv2
 if __name__ == "__main__":
     main()
