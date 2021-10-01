@@ -15,6 +15,7 @@ def main() -> None:
         data = csv.reader(f)
         
         # Following can be used to make a bounding box in the certificate in order to make it look proper and can insert text based on the bouding box
+        # There is also one other file called drawrectangle.py which can be used to draw a rectangle on the image which will help to create a bounding box at whatever coordinates you want by drawing a rectangle on the image and will also provide the coordinates of the rectangle for the left top and right bottom corner of the rectangle.
         bounding_box = [580, 1185, 2920, 1356]
         x1, y1, x2, y2 = bounding_box
 
@@ -25,6 +26,8 @@ def main() -> None:
                 filename = f"{row[1]}.png"
                 img = Image.open(filename)
                 draw = ImageDraw.Draw(img)
+                
+                # The fonts can be downloaded from google fonts and any other open source font providing website.
                 font = ImageFont.truetype('timr45w.ttf', 150) # write the path of the font which you want to select
                 
                 # center align in particlar box section defined
@@ -35,7 +38,7 @@ def main() -> None:
                 x position = (x pos of the right lower of the bounding box - x pos of the left upper of the bouding box - width of the text)/2 + x pos of the left upper of the bouding box makes the varaible x as the x position of the text to be inserted inside the bouding box center aligned
                 Similary we can do for the y position
                 """
-                x = (x2 - x1 - w)/2 + x1 #  
+                x = (x2 - x1 - w)/2 + x1
                 y = (y2 - y1 - h)/2 + y1
 
                 draw.text((x, y), row[0], (152, 141, 100), font=font)
