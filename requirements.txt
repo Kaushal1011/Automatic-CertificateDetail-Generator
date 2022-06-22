@@ -1,5 +1,5 @@
 autopep8==1.5.7
-numpy==1.21.2
+numpy==1.22.0
 opencv-python==4.5.3.56
 Pillow==8.3.2
 pycodestyle==2.7.0
